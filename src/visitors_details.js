@@ -34,6 +34,6 @@ let charlie = new Visitor('Charlie Sheen', 91, '16/09/2019', '10:15', 'Yeeeeeeee
 charlie.save();
 // console.log(charlie);
 
-// exports.module = {
-//     Visitor
-// }
+module.exports = {
+    Visitor
+}
