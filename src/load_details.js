@@ -12,15 +12,12 @@ async function load(fullName){
         }
 
         else{
-        // let newStr = JSON.parse(data);
             console.log(data);
             }
     });
-
-    // console.log('This is after the read call');
 }
 
-// load("Alice Cooper");
+load("Alice Cooper");
 
  exports.module = {
      load

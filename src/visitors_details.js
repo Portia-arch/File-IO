@@ -22,17 +22,17 @@ class Visitor {
     }
 }
 
-// let alice = new Visitor('Alice Cooper', 12, '12/03/2019', '13:26', 'yey!', 'Weston')
-// alice.save();
-// // console.log(alice);
+let alice = new Visitor('Alice Cooper', 12, '12/03/2019', '13:26', 'yey!', 'Weston')
+alice.save();
+// console.log(alice);
 
-// let bob = new Visitor('Bob Marley', 26, '1/06/2020', '08:26', 'Boring', 'Mpumelelo')
-// bob.save();
-// // console.log(bob); 
+let bob = new Visitor('Bob Marley', 26, '1/06/2020', '08:26', 'Boring', 'Mpumelelo')
+bob.save();
+// console.log(bob); 
 
-// let charlie = new Visitor('Charlie Sheen', 91, '16/09/2019', '10:15', 'Yeeeeeeeeeeeey!!!!', 'Tadiwa')
-// charlie.save();
-// // console.log(charlie);
+let charlie = new Visitor('Charlie Sheen', 91, '16/09/2019', '10:15', 'Yeeeeeeeeeeeey!!!!', 'Tadiwa')
+charlie.save();
+// console.log(charlie);
 
 module.exports = {
     Visitor
