@@ -20,8 +20,8 @@ async function load(fullName){
     // console.log('This is after the read call');
 }
 
-load("Alice Cooper");
+// load("Alice Cooper");
 
-//  exports.module = {
-//      load
-//  }
+ exports.module = {
+     load
+ }
