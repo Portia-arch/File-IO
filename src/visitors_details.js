@@ -1,5 +1,6 @@
 'use strict';
 const fs = require('fs');
+const load = require('../src/load_details')
 
 class Visitor {
     constructor(Name, Age, Visit_date, Time, Comments, Assistant) {

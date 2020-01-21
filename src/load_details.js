@@ -19,6 +19,6 @@ async function load(fullName){
 
 load("Alice Cooper");
 
- exports.module = {
-     load
- }
+//  exports.module = {
+//      load
+//  }

@@ -1,7 +1,5 @@
-
-let {Visitor} = require('../src/visitors_details')
-let load = require('../src/load_details')
 const fs = require('fs');
+let {Visitor} = require('../src/visitors_details')
 
 let obj = {
     fullName: "Alice Cooper",
@@ -10,9 +8,10 @@ let obj = {
     timeOfVisit: "13:26",
     comments: "yey!",
     assistant: "Weston"
-};
-let visitor = new Visitor(
-    obj.Name,
+};  
+
+let objects = new Visitor(
+    obj.fullName,
     obj.Age,
     obj.Visit_date,
     obj.Time,
@@ -50,10 +49,4 @@ describe('function save()', function() {
         });
     });
 
-    // it('checks  if data is saved into a file', async function(){
-    //     let file = require(`visitor_alice_cooper.json`)
-
-    //     console.log(typeof file)
-    //     expect(file.name).toBe(obj.name)
-    // });
 });
