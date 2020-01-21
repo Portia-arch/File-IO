@@ -4,20 +4,20 @@ let load = require('../src/load_details')
 const fs = require('fs');
 
 let obj = {
-    fullname: "Alice Cooper",
-    age: "12",
-    dateofvisit: "12/03/2019",
-    timeofvisit: "13:26",
+    fullName: "Alice Cooper",
+    Age: "12",
+    dateOfVisit: "12/03/2019",
+    timeOfVisit: "13:26",
     comments: "yey!",
-    nameofassistant: "Weston"
+    assistant: "Weston"
 };
 let visitor = new Visitor(
-    obj.fullName,
+    obj.Name,
     obj.Age,
-    obj.dateofvisit,
-    obj.timeofvisit,
-    obj.comments,
-    obj.nameofassistant)
+    obj.Visit_date,
+    obj.Time,
+    obj.Comments,
+    obj.Assistant)
 
 describe('function save()', function() {
 
@@ -30,19 +30,30 @@ describe('function save()', function() {
 
     //tests if the file is created
     it('creates named files', async function() {
-        aliceFile = new Visitor(obj.fullName, obj.Age, obj.dateofvisit, obj.timeofvisit, obj.comments,obj.assistant)
+        aliceFile = new Visitor(obj.fullName, obj.Age, obj.dateOfVisit, obj.timeOfVisit, obj.comments,obj.assistant)
         expect(aliceFile.toString()).toBe(obj.toString())
     });
 
     //it reads the file
-    it("should read the contents of the file", () => {
+    it('should read the contents of the file', async function() {
         fs.readFile('visitor_alice_cooper.json', 'UTF8', (err, data) => {
             if (err) { throw err }
             else {
-                let Data = data
-                expect(Data).toEqual(JSON.stringify(alice, null, 2))
+                let content = JSON.parse(data)
+                expect(content.fullName).toEqual('Alice Cooper')
+                expect(content.Age).toEqual(12)
+                expect(content.dateOfVisit).toEqual('12/03/2019')
+                expect(content.timeOfVisit).toEqual('13:26')
+                expect(content.comments).toEqual('yey!')
+                expect(content.assistant).toEqual('Weston')
             }
         });
     });
 
+    // it('checks  if data is saved into a file', async function(){
+    //     let file = require(`visitor_alice_cooper.json`)
+
+    //     console.log(typeof file)
+    //     expect(file.name).toBe(obj.name)
+    // });
 });
