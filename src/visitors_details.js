@@ -39,11 +39,6 @@ async function load(fullName) {
     });
 }
 
-load("Alice Cooper");
-
-//  exports.module = {
-//      load
-//  }
 
 module.exports = {
     Visitor
