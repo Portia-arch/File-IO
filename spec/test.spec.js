@@ -18,8 +18,6 @@ let objects = new Visitor(
     obj.Comments,
     obj.Assistant)
 
-    let fullName = 
-
 describe('function save()', function() {
 
     let alice = new Visitor('Alice Cooper', 12, '12/03/2019', '13:26', 'yey!', 'Weston')
@@ -51,9 +49,4 @@ describe('function save()', function() {
         });
     });
 
-    // it('', async function(){
-    //     let file = `visitor_${fullName}.json`
-
-    //     expect(file.fullName).toEqual(obj.fullName)
-    // })
 });
